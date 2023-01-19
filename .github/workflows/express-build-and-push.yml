@@ -2,7 +2,7 @@ name: Expressjs Build
 
 on:
   push:
-    branches: master
+    branches: main
     paths: 
     - 'api/**'
 

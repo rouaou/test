@@ -2,7 +2,7 @@ name: Nginx Build
 
 on:
   push:
-    branches: master
+    branches: main
     paths: 
     - 'loadbalancer/**'
 

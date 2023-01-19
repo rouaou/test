@@ -19,7 +19,7 @@ export class AlertComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // unsubscribe on destroy to prevent memory leaks
+    // unsubscribe on destroy to prevent memory leaks perte memoire
     this.subscription.unsubscribe();
   }
 }

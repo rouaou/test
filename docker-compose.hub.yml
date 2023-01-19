@@ -2,19 +2,21 @@ version: "3.8" # specify docker-compose version
 
 # Define the services/containers to be run
 services:
-  angular: # name of the first service
-    image: nitin27may/mean-angular:latest # specify image to build container from
+  angular:
+    # name of the first service
+    image: aquilin/mean-angular:latest # specify image to build container from
     container_name: mean_angular
     restart: always
     ports:
       - "4000:4000" # specify port forewarding
     environment:
       - NODE_ENV=dev
-    links: 
-      - express 
+    links:
+      - express
 
-  express: #name of the second service
-    image: nitin27may/mean-expressjs:latest # specify image to build container from
+  express:
+    #name of the second service
+    image: aquilin/mean-expressjs:latest # specify image to build container from
     container_name: mean_express
     restart: always
     ports:
@@ -31,7 +33,8 @@ services:
     links:
       - database
 
-  database: # name of the third service
+  database:
+    # name of the third service
     image: mongo:latest # specify image to build container from
     container_name: mean_mongo
     restart: always
@@ -48,8 +51,9 @@ services:
     ports:
       - "27017:27017" # specify port forewarding
 
-  nginx: #name of the fourth service
-    image: nitin27may/mean-nginx # specify image to build container from
+  nginx:
+    #name of the fourth service
+    image: aquilin/mean-nginx # specify image to build container from
     container_name: mean_nginx
     restart: always
     ports:

@@ -18,7 +18,7 @@ exports.index = function (req, res) {
   });
 };
 
-// Handle create user actions
+// Handle create user actions add user
 exports.new = function (req, res) {
   Contact.find({ mobile: req.body.mobile.trim() }, function (err, contacts) {
     if (err) {

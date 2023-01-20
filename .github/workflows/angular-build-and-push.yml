@@ -22,8 +22,8 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          username: aquilin
-          password: dckr_pat_1AefH6gZOQsTVKXwEX-q_s-mF6o
+          username: hadoopaccount
+          password: dckr_pat_umcCGy1S6ZhL6sXrys0eKtRXP-U
       -
         name: Build and push
         id: docker_build
@@ -32,9 +32,9 @@ jobs:
           context: frontend/.
           file: frontend/Dockerfile
           push: true
-          tags: aquilin/mean-angular:latest
+          tags: hadoopaccount/mean-angular:latest
           secrets: |
-            GIT_AUTH_TOKEN=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
+            GIT_AUTH_TOKEN=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
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

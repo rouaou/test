@@ -23,8 +23,8 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          username: aquilin
-          password: dckr_pat_1AefH6gZOQsTVKXwEX-q_s-mF6o
+          username: hadoopaccount
+          password: dckr_pat_umcCGy1S6ZhL6sXrys0eKtRXP-U
       -
         name: Build and push
         id: docker_build
